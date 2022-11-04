@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+    overflow: hidden!important;
+}
+body {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden!important;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #222;
+}
+
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 100%;
+    color: #fff;
+    text-align: center;
+}
+.head {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    color: #fff;
+}
+.header .head .play-again__btn {
+    font-size: 2.2rem;
+    padding: 1.3rem 2rem;
+    cursor: pointer;
+    font-family: 'Press Start 2P', cursive;
+}
+.header .head .primary-title {
+    font-size: 4rem;
+    margin-top: 15rem;
+}
+.header .head .secondary {
+    font-size: 1.4rem;
+}
+
+.header .correct-box {
+    margin-top: 20rem;
+    padding: 3rem 3.5rem;
+    font-size: 5rem;
+    background-color: #fff;
+    color: #222;
+    position: relative;
+}
+.header .correct-box::before{
+    content: '';
+    width: 100vw;
+    height: .7rem;
+    background-color: #fff;
+    position: absolute;
+    top: 5rem;
+    right: 100%;
+}
+.header .correct-box::after{
+    content: '';
+    width: 100vw;
+    height: .7rem;
+    background-color: #fff;
+    position: absolute;
+    top: 5rem;
+    left: 100%;
+}
+
+
+.main {
+    margin-bottom: 10rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    text-align: center;
+}
+.main .guess-box__left {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3rem;   
+}
+.main .guess-box__left .input {
+    width: 23rem;
+    height: 10rem;
+    padding-left: 1rem;
+    background-color: #222;
+    border: 3px solid #fff;
+    color: #fff;
+    font-size: 5rem;
+    outline: none;
+}
+.main .guess-box__left .check-btn{
+    width: 17rem;
+    height: 7rem;
+    border: none;
+    font-size: 2.5rem;
+    color: #222;
+    font-family: 'Press Start 2P', cursive;
+    background-color: #fff;
+    cursor: pointer;
+}
+.main .guess-box__left .check-btn:active{
+    transform: scale(0.95);
+}
+.main .guess-box__left .check-btn:hover{
+    opacity: 0.7;
+}
+
+
+.main .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 5rem;
+    width: 100%;
+    margin-bottom: 5rem;
+}
+.main .right .high-or-low{
+    font-size: 2.2rem;
+}
+.main .right .score{
+    margin-top: 2rem;
+    font-size: 1.7rem;
+}
+.main .right .highscore{
+    font-size: 1.7rem;
+}
+
+@media screen and (max-width: 603px) {
+    html{font-size: 50%;}
+    
+    .main {
+        flex-direction: column;
+        gap: 5rem;
+    }
+    .header .head .primary-title {
+        font-size: 3rem;
+    }
+    .header .head .play-again__btn {
+        margin-left: 1rem;
+    }
+}
+
+@media screen and (max-width: 450px){
+    html{font-size: 45%;}
+    .main {
+        margin-top: 5rem;
+    }
+    .header .head .primary-title {
+        font-size: 2.5rem;
+    }
+    .header .head .play-again__btn {
+        margin-left: 1rem;
+    }
+}
