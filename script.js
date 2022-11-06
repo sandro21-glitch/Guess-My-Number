@@ -12,7 +12,7 @@ const highscore = document.getElementById('highscore');
 let play = function(){document.getElementById("audio").play()}
 
 let correctAnswer = Math.floor(Math.random() * 20 + 1);
-console.log(correctAnswer)
+//console.log(correctAnswer)
 
 let gameScore = 20;
 let gameHighScore = 0;
@@ -69,5 +69,4 @@ playAgain.addEventListener('click', () => {
     checkAnswer.disabled = false;
     correctBox.innerText = '?';
     correctAnswer = Math.floor(Math.random() * 20 + 1);
-    console.log(correctAnswer)
 });
