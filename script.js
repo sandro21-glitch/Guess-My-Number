@@ -12,7 +12,7 @@ const highscore = document.getElementById('highscore');
 let play = function(){document.getElementById("audio").play()}
 
 let correctAnswer = Math.floor(Math.random() * 20 + 1);
-// console.log(correctAnswer)
+console.log(correctAnswer)
 
 let gameScore = 20;
 let gameHighScore = 0;
@@ -31,7 +31,7 @@ function gameStart() {
         correctBox.innerText = correctAnswer;
         checkAnswer.disabled = true;
         checkHighScore();
-        play()
+        // play()
     }else if(inputValue > correctAnswer){
         highOrLow.innerText = 'Too High';
         updateScore();
@@ -68,6 +68,6 @@ playAgain.addEventListener('click', () => {
     input.value = '';
     checkAnswer.disabled = false;
     correctBox.innerText = '?';
+    correctAnswer = Math.floor(Math.random() * 20 + 1);
+    console.log(correctAnswer)
 });
-
-
